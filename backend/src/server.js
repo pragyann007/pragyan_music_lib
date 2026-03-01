@@ -1,5 +1,7 @@
 import express from 'express';
 import cors from 'cors';
+import audioRouter from './routes/ausio.js';
+
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -12,6 +14,8 @@ app.use(express.json());
 app.get('/', (req, res) => {
   res.send('Hello, World!');
 });
+
+app.use("/api/audio",audioRouter);
 
 // Start the server
 app.listen(PORT, () => {
