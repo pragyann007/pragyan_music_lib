@@ -163,6 +163,9 @@ function AnimatedBars({ active, small = false }: { active: boolean; small?: bool
           style={{ height: height * 0.5 }}
         />
       ))}
+      {/* done */}
+      <h1></h1>
     </div>
   );
+  
 }
